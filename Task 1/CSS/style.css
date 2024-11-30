@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes example {
+    0%   {background-color:orange;
+        border-radius: 0;
+        transform: rotate(0deg); }
+    
+    25%  {background-color:#f0beab; 
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 0;
+        transform: rotate(90deg);
+}
+    50%  {background-color:#d26566;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        transform: rotate(180deg);
+}
+    75%  {background-color:#f4a2a2;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        transform: rotate(270deg);
+}
+    100% {background-color:#e99a7e;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        transform: rotate(360deg);
+}
+  }
+
+#cube
+{
+    margin: 70px;
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+

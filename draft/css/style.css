@@ -1,0 +1,28 @@
+.container {
+    position: relative;
+  }
+  
+  .div1 {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  
+  .div2 {
+    display: none; /* Скрываем изначально */
+    width: 100px;
+    height: 50px;
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 10px;
+  }
+  
+  /* Когда .div1 в состоянии hover, показываем .div2 */
+  .div1:hover + .div2 {
+    display: block;
+  }
+  
