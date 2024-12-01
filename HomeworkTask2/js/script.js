@@ -9,32 +9,39 @@ function appendToDisplay(input) {
     }
     let currentValue = display.innerText;
 
-    if (['+', '-', '×', '÷', '%'].includes(input)) {
+    if (['+', '-', '×', '÷', '%', '.'].includes(input)) {
         if (currentValue === "" || currentValue === "0") {
             return;
         }
 
         let lastChar = currentValue[currentValue.length - 1];
-        if (['+', '-', '×', '÷', '%'].includes(lastChar)) {
+        if (['+', '-', '×', '÷', '%', '.'].includes(lastChar)) {
             return;
         }
     }
-        var button = document.getElementById("zero");  
 
-    if ('÷'.includes(input)) {
-        button.disabled = true;
-    }else{
-        button.disabled = false;
+    if (input === '.') {
+        let numbers = currentValue.split(/[\+\-\×\÷\%\=]+/);
+        let lastNumber = numbers[numbers.length - 1];
+        if (lastNumber.includes('.')) {
+            return;
+        }
     }
 
-    if (display.innerText === "0") {
+    var zeroButton = document.getElementById("zero");
+    if ('÷'.includes(input)) {
+        zeroButton.disabled = true;
+    } else {
+        zeroButton.disabled = false;
+    }
+
+    if (display.innerText === "0" || display.innerText === "Error") {
         display.innerText = input;
     } else {
         display.innerText += input;
     }
-
-
 }
+
 
 function clear() {
     display.innerText = "0";

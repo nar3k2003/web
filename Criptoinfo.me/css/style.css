@@ -51,6 +51,7 @@ body::-webkit-scrollbar {
 
 .header-menu-button
 {
+    border: none;
     width: 48px;
     height: 48px;
     display: flex;
@@ -74,10 +75,9 @@ body::-webkit-scrollbar {
     z-index: 999;
     display: none;
     line-height: 40px;
-    /* overflow-y: auto; */
 }
 
-.header-menu-button:active + .header-menu {
+.active {
     display: block;
 }
 
@@ -99,6 +99,7 @@ body::-webkit-scrollbar {
 }
 
 .header-menu-button-close{
+    border: none;
     width: 48px;
     height: 48px;
     display: flex;
@@ -144,6 +145,9 @@ body::-webkit-scrollbar {
 .language-container{
     position: relative;
     /* display: inline-block; */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 11px;
 }
 
 .language {
@@ -158,10 +162,9 @@ body::-webkit-scrollbar {
 }
 
 .header-language-hover {
-    position: absolute;
     display: none;
-    /* display: flex; */
-    /* flex-direction: column; */
+
+    position: absolute;
     z-index: 2;
     color: white;
     padding: 12px;
@@ -172,6 +175,14 @@ body::-webkit-scrollbar {
     left: -70px;
 }
 
+.activeLanguage{
+    display: block;
+}
+
+.activeTic {
+    transform: rotate(180deg);
+}
+
 .language-rus-usa{
     display: flex;
     flex-direction: row;
@@ -180,13 +191,15 @@ body::-webkit-scrollbar {
     gap: 10px;
 }
 
-.language:active .language-tic{
+/* .language:active .language-tic{
     transform: rotate(180deg);
 }
 
 .language:active + .header-language-hover {
     display: block;
-}
+} */
+
+
 
 .flag {
     width: 19px;
@@ -434,6 +447,7 @@ h2{
         padding-right: 100px;
     }
     .header-menu-button {
+
         display: none;
     }
 }

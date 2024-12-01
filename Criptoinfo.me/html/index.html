@@ -10,11 +10,11 @@
     <div class="app-container">
         <header class="header">
             <div class="header-container">
-                <div class="header-menu-button">
+                <button class="header-menu-button" onclick="openManu()">
                     <div>
                         <img src="../img/headerBar-icon.jpg" alt="" width="20px" height="20px">
                     </div>
-                </div>
+                </button>
                 <div class="header-menu">
                     <div class="header-logo">
                         <img src="../img/1709886192logo_ci_color.jpg" alt="Criptoinfo.me">
@@ -47,13 +47,12 @@
                             </li>
                         </ul>#
                     </div>
-                    <div class="header-menu-button-close">
+                    <button class="header-menu-button-close" onclick="closeManu()">
                         <div>
                             <img src="../img/burger-close-icon.jpg" alt="" width="20px" height="20px">  
                         </div>
-                    </div>
+                    </button>
                 </div>
-
                 <div class="header-logo">
                     <img src="../img/1709886192logo_ci_color.jpg" alt="Criptoinfo.me">
                 </div>
@@ -91,7 +90,7 @@
                         <div class="dark-mode">
                             <img src="../img/theme-dark.svg" alt="dark mode">
                         </div>
-                        <div class="language-container">
+                        <button class="language-container" onclick="openLanguages()">
                             <div class="language">
                                 <div class="flag"></div>
                                 <img class="language-tic" src="../img/down-arrow.svg" alt="tic" width="10px" height="10px">
@@ -106,7 +105,7 @@
                                     <span>English</span>
                                 </div>
                             </div>
-                        </div>
+                        </button>
                     </div>
                     
                     <div class="header-login-down">
@@ -211,6 +210,6 @@
             </div>
         </footer>
     </div>
-    
+    <script src="../js/script.js"></script>
 </body>
 </html>
