@@ -1,8 +1,12 @@
 var display = document.getElementById("display");
 var acButton = document.getElementById("ac");
+var existResult = false;
+
 
 function appendToDisplay(input) {
-
+    if (existResult) {
+        clear();
+    }
     let currentValue = display.innerText;
 
     if (['+', '-', '×', '÷', '%'].includes(input)) {
@@ -15,16 +19,26 @@ function appendToDisplay(input) {
             return;
         }
     }
+        var button = document.getElementById("zero");  
+
+    if ('÷'.includes(input)) {
+        button.disabled = true;
+    }else{
+        button.disabled = false;
+    }
 
     if (display.innerText === "0") {
         display.innerText = input;
     } else {
         display.innerText += input;
     }
+
+
 }
 
 function clear() {
     display.innerText = "0";
+    existResult = false;
 }
 
 function equall() {
@@ -38,12 +52,14 @@ function equall() {
             result = result.toFixed(7);
             result = parseFloat(result).toString();
         }
-
         display.innerText = result;
+        existResult = true;
+        
     } catch {
         display.innerText = "Error";
     }
 }
+
 
 
 function plusMinus() {
