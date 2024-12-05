@@ -158,7 +158,6 @@ body::-webkit-scrollbar {
     border-radius: 11px;
     padding: 12px;
     cursor: pointer;
-    /* position: relative; */
 }
 
 .header-language-hover {
