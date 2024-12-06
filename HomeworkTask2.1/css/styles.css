@@ -463,6 +463,32 @@ h1
     height: 100px;
 }
 
+.contentMainLeft b{
+    font-weight: bold;
+    color: rgb(124, 0, 0);
+}
+
+#nameError, #mailError, #commentsError, #robotError, .contentMainLeft i{
+    font-size: 13px;
+    color: rgb(124, 0, 0);
+}
+
+#robotError{
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+#nameError, #mailError, #commentsError, #robotError{
+    display: none;
+}
+
+#nameError.activeError, 
+#mailError.activeError, 
+#commentsError.activeError,
+#robotError.activeError {
+    display: block !important;
+}
+
 .contentMainRight{
     display: flex;
     height: 100%;

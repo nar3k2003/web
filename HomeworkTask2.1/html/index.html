@@ -161,7 +161,7 @@
                     </div>
                     <div class="contentMain">
                         <h1>Contact Us</h1>
-                        <div class="contentMainRequired">
+                        <div class="contentMainLeft">
                             <p>
                                 <b>
                                     *All fields required, unless marked optional.
@@ -175,91 +175,88 @@
                                         <div class="contactMainText">
                                             <label for="name">
                                                 Your name
-                                                <span>*</span>
+                                                <i>*</i>
                                             </label>
                                         </div>
-                                        <input type="text" name="name">
+                                        <input type="text" name="name" id="name">
+                                        <span id="nameError">Field is required</span>
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="mail">
                                                 E-Mail
-                                                <span>*</span>
+                                                <i>*</i>
                                             </label>
                                         </div>
-                                        <input type="text" name="mail">
+                                        <input type="text" name="mail" id="mail">
+                                        <span id="mailError">Field is required</span>
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="company">
                                                 Company
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="company" placeholder="(optional)">
+                                        <input type="text" name="company" placeholder="(optional)"
+                                        id="company">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="address">
                                                 Address
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="address" placeholder="(optional)">
+                                        <input type="text" name="address" placeholder="(optional)" id="address">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="city">
                                                 City
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="city" placeholder="(optional)">
+                                        <input type="text" name="city" placeholder="(optional)" id="city">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="state">
                                                 State
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="state" placeholder="(optional)">
+                                        <input type="text" name="state" placeholder="(optional)" id="state">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="postal">
                                                 Postal Code
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="postal" placeholder="(optional)">
+                                        <input type="text" name="postal" placeholder="(optional)" id="postal">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="phone">
                                                 Phone
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="phone" placeholder="(optional)">
+                                        <input type="text" name="phone" placeholder="(optional)" id="phone">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="fax">
                                                 Fax
-                                                <span>*</span>
                                             </label>
                                         </div>
-                                        <input type="text" name="fax" placeholder="(optional)">
+                                        <input type="text" name="fax" placeholder="(optional)" id="fax">
                                     </div>
                                     <div class="contactMainInput">
                                         <div class="contactMainText">
                                             <label for="state">
                                                 Comments 
-                                                <span>*</span>
+                                                <i>*</i>
                                             </label>
                                         </div>
-                                        <textarea name="comments"></textarea>
+                                        <textarea name="comments" id="comments"></textarea>
+                                        <span id="commentsError">Field is required</span>
                                     </div>
                                 </div>
                             </div>      
@@ -275,14 +272,19 @@
                             </div>             
                         </div>
                         <div class="contentMainBottom">
-                            <div class="iAmNotARobot">
-                                <input type="checkbox" name="iamnotarobot" id="">
-                                <label for="iamnotarobot"> I'm not a robot</label>
-                                <img src="../img/iamnotarobot.png" alt="iamnotarobot" width="70px" height="60px">
+                            <div>
+                                <div class="iAmNotARobot">
+                                    <input type="checkbox" name="iamnotarobot" id="iamnotarobot">
+                                    <label for="iamnotarobot"> I'm not a robot</label>
+                                    <img src="../img/iamnotarobot.png" alt="iamnotarobot" width="70px" height="60px">
+                                </div>
+                                <span id="robotError">
+                                    Please ensure that you are a human!
+                                </span>
                             </div>
                             <div class="SubmitAndClearForm">
-                                <button>Clear Form</button>
-                                <button>Submit</button>
+                                <button id="clearForm">Clear Form</button>
+                                <button id="submit">Submit</button>
                             </div>
                         </div>     
                     </div>
